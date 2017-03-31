@@ -49,3 +49,9 @@
 <div align="center">
 <img width="300px" src="https://cloud.githubusercontent.com/assets/4949982/24544313/c1896590-163d-11e7-80f4-38896daf783b.png">
 </div>
+
+<div align="center">図4. 文脈(skip gram)に依存せず近くなるので、好ましく働くことも、好ましくなく働くこともある </div>
+
+<p align="center">
+<img width="800px" src="https://cloud.githubusercontent.com/assets/4949982/24544412/235b635e-163e-11e7-90dc-a9297181a7c3.png">
+</p>
