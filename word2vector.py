@@ -43,7 +43,7 @@ def train_username():
   open('model.withusername.pkl', 'wb').write( pickle.dumps(model, protocol=4) )
 
 def pred():
-  model  = pickle.loads(open('model.nousername.pkl', 'rb').read())
+  model  = pickle.loads(open('./model.word2vec.nousername.pkl?dl=0', 'rb').read())
   while True:
     words = input().split()
     positive = list(filter(lambda x:x[0]!="-", words))
@@ -54,7 +54,7 @@ def pred():
       tuples = model.wv.most_similar(positive=positive, negative=negative)
       print( json.dumps(tuples, ensure_ascii=False, indent=2) )
     except KeyError as e:
-      print( "キーが存在しませんでした" )
+      print( "キーが見つかりませんでした" )
 
 def pred_user():
   model  = pickle.loads(open('./model.withusername.pkl', 'rb').read())
@@ -64,7 +64,7 @@ def pred_user():
       tuples = model.wv.most_similar(positive=words)
       print( json.dumps(tuples, ensure_ascii=False, indent=2) )
     except KeyError as e:
-      print( "キーが存在しませんでした" )
+      print( "繧ｭ繝ｼ縺悟ｭ伜惠縺励∪縺帙ｓ縺ｧ縺励◆" )
 if __name__ == '__main__':
   if '--train' in sys.argv:
     train()

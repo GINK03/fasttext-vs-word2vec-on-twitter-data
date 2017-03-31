@@ -3,7 +3,7 @@ import json
 import sys
 import pickle
 def pred():
-  model = pickle.loads(open('fasttext.gensim-model.pkl', 'rb').read())
+  model = pickle.loads(open('fasttext.gensim-model.pkl?dl=0', 'rb').read())
   while True:
     words = input().split()
     positive = list(filter(lambda x:x[0]!="-", words))
