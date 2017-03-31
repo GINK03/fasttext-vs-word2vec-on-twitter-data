@@ -84,3 +84,29 @@
 <p align="center">
 <img width="600px" src="https://cloud.githubusercontent.com/assets/4949982/24545540/7b33c590-1642-11e7-96fa-707a248eed53.png">
 </p>
+
+## 応用例：言葉の進化(バズ)を観測する
+- 言葉はバズると使用法が変化する
+- 今までの主流は単語の出現頻度の変化の観測
+- 単語の使われ方の変化を観測する
+<p align="center">
+<img width="450px" src="https://cloud.githubusercontent.com/assets/4949982/24545646/e78fc98c-1642-11e7-8e02-174a00d4bc96.png">
+</p>
+
+- 2次元にエンベットされていると仮定すると、図のようになる
+<p align="center">
+<img width="180px" src="https://cloud.githubusercontent.com/assets/4949982/24545715/3b69c616-1643-11e7-8186-78444a27af61.png">
+</p>
+- さらに時間系列でベクトルを表現すると下図のようになる
+<p align="center">
+<img width="720px" src="https://cloud.githubusercontent.com/assets/4949982/24545746/60927492-1643-11e7-86dc-d0637e7d76f1.png">
+</p>
+
+- 技術的な課題点の解決  
+-- 問題点:エンベッティングの際、初期値依存性があり、ベクトルが回転したり、端によったりすると歪んだりする。  
+-- 解決策:絶対座標に変換するため、基準となる単語を選択（16000単語前後）  
+-- 解決策:基準となる単語郡からのコサイン類似度の変化量を各観測したい単語ごとに作成  
+-- 解決策:このベクトルをZとする  
+<p align="center">
+<img width="750px" src="https://cloud.githubusercontent.com/assets/4949982/24545875/00a9cf70-1644-11e7-9a99-49af43db450a.png">
+</p>
