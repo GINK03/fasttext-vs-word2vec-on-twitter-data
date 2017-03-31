@@ -110,3 +110,11 @@
 <p align="center">
 <img width="750px" src="https://cloud.githubusercontent.com/assets/4949982/24545875/00a9cf70-1644-11e7-9a99-49af43db450a.png">
 </p>
+
+- Z(プ)ベクトル（長いので略す）をデイリーで作成していき、n日のZ(プ)ベクトルをZ(プ,n)ベクトルとする
+- Z(プ,n)ベクトルとZ(プ,n-1)ベクトルとのユークリッド距離を計算する
+<p align="center">
+<img width="350px" src="https://cloud.githubusercontent.com/assets/4949982/24546027/8aa374c4-1644-11e7-88ba-0b22357ef421.png">
+</p>
+<div align="center">Dの大きさが大きいほど、使用法が変化したと考えることができ、バズや言葉の進化を定量的に観測することができる。
+</div>
