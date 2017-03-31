@@ -133,5 +133,19 @@
 
 # Tweet取得・分析のシステム構成
 <p align="center">
-<img width="750px" src="https://cloud.githubusercontent.com/assets/4949982/24546324/af3ba68e-1645-11e7-83bd-0154bbc73904.png">
+<img width="650px" src="https://cloud.githubusercontent.com/assets/4949982/24546324/af3ba68e-1645-11e7-83bd-0154bbc73904.png">
 </p>
+
+# Appendix.1. 対応関係を学ぶ
+- 図を見ると企業と企業の代表者の関係をみると、一定の法則があることがわかる
+<p align="center">
+<img width="400px" src="https://cloud.githubusercontent.com/assets/4949982/24546432/38320dd4-1646-11e7-85cc-95dba0e3893c.png">
+</p>
+- この性質（Distributional inclusion hypothesis）を利用して、logistic-regressionなどで、関係を学習することが可能である
+
+# Appedix.2. 未知の言語を翻訳する
+- 出現する単語の並びの関連に相関があるので、言語が異なっても似たような分布になる
+<p align="center">
+<img width="400px" src="https://cloud.githubusercontent.com/assets/4949982/24546497/8015d2ca-1646-11e7-9bf7-9a2a2c3493bf.png">
+</p>
+<div align="center"> 文字の文化が共通していれば、翻訳可能？</div>
