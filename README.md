@@ -38,11 +38,6 @@
 </p>
 <div align="center">図3. word2vecの単語ベクトルの足し算引き算の例</div>
 
-# Tweet取得・分析のシステム構成
-<p align="center">
-<img width="750px" src="https://cloud.githubusercontent.com/assets/4949982/24546324/af3ba68e-1645-11e7-83bd-0154bbc73904.png">
-</p>
-
 ### fasttextで遊ぶ方法
 ただの言葉の相関の他、言語の足し算引き算した結果、何の単語に近くなるか計算できます。
 <p align="center">
