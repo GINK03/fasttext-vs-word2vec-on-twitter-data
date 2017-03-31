@@ -10,9 +10,9 @@
 
 ## Embeddingの原理
 - Skip gramではある特定の単語の前後の単語の出現確率を測定することでベクトル化する
-<div style="width:100px;margin-left: auto;margin-right: auto;">
-<img style="width:100px;" src="https://cloud.githubusercontent.com/assets/4949982/24543247/deba1758-1639-11e7-9f89-fc832bc4c347.png">
-</div>
+<p align="center">
+<img width="600px" src="https://cloud.githubusercontent.com/assets/4949982/24543247/deba1758-1639-11e7-9f89-fc832bc4c347.png">
+</p>
 <div align="center">図1. ある目的の単語から、周辺の単語の確率を計算していってベクトル化する</div>
 - Word2vecとfasttextではこれを実装したもの
 - 
