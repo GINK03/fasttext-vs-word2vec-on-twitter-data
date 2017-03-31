@@ -44,7 +44,7 @@
 <img width="750px" src="https://cloud.githubusercontent.com/assets/4949982/24544155/39a6b420-163d-11e7-8588-2a5c922039e2.png">
 </p>
 
-### fasttextとword2vecとの違い
+## fasttextとword2vecとの違い
 - fasttextはsubword分割という単語の中の一部が近いと近くなる特性がある
 <div align="center">
 <img width="300px" src="https://cloud.githubusercontent.com/assets/4949982/24544313/c1896590-163d-11e7-80f4-38896daf783b.png">
@@ -54,4 +54,33 @@
 
 <p align="center">
 <img width="800px" src="https://cloud.githubusercontent.com/assets/4949982/24544412/235b635e-163e-11e7-90dc-a9297181a7c3.png">
+</p>
+
+- Word2Vecで“艦これ”の関連度を計算すると、同じような文脈で用いられる、他のゲームタイトルが多く混じってしまう
+- これはメリットなのか、デメリットなのか、使用用途でわかれそう
+<p align="center">
+<img width="450px" src="https://cloud.githubusercontent.com/assets/4949982/24544559/a86ae308-163e-11e7-88d5-30d27943fc45.png">
+</p>
+
+### 単語の演算の違い
+- Word2Vecの特徴として、単語の演算が謎理論（理論的な裏付けが無いように見える）で演算できる
+- fasttextもベクトル表現なので、足し算・引き算が可能なので比較する
+- fasttextとw2vで結果が異なる
+<p align="center">
+<img width="750px" src="https://cloud.githubusercontent.com/assets/4949982/24544827/bb4ac5e6-163f-11e7-8b4a-2e3f8b171aa7.png">
+</p>
+
+## fasttext, word2vecの実践的な使い方
+- CNN, RNNなどのディープラーニングの素性とする
+- 例えば、100万語で、10単語の文章の判別問題の際、one-hotを利用すると、壊滅的なテンソルサイズになりGPUに乗らない
+- そこで意味関係を内包しているという仮説がある、fasttext, w2vを使うことで、256次元程度にシュリンクできる
+<p align="center">
+<img width="450px" src="https://cloud.githubusercontent.com/assets/4949982/24544957/4352829e-1640-11e7-888e-5cac42855563.png">
+</p>
+
+## RNN(or CNN)の出力をfasttext, word2vecの出力に近似して使う場合
+- Deep Learningの出力、特にRNNのテキスト生成系のモデルにおいて、出力次元が爆発してしまう問題に対応するため、出力
+- 出力をLinear + mean square errorとすることで、直接ベクトルを当てに行くことができる(復元するにはconsine類似度などで逆引きする必要がある)
+<p align="center">
+<img width="600px" src="https://cloud.githubusercontent.com/assets/4949982/24545540/7b33c590-1642-11e7-96fa-707a248eed53.png">
 </p>
