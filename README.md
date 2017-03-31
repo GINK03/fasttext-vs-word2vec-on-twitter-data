@@ -118,3 +118,10 @@
 </p>
 <div align="center">Dの大きさが大きいほど、使用法が変化したと考えることができ、バズや言葉の進化を定量的に観測することができる。
 </div>
+
+- これを日にちのタイムシリーズでグラフを描画すると下図のようになる
+<p align="center">
+<img width="450px" src="https://cloud.githubusercontent.com/assets/4949982/24546190/16e3da46-1645-11e7-916c-fbdcbf106ce0.png"> 
+</p> 
+
+<div align="center">例えば、意味の変化量が少ない「ソシャゲ」という単語と、激しく文脈が変化した「プレミアムフライデー」という単語の変化量Dは大きく違う</div>
