@@ -34,6 +34,8 @@ def train_wikipedia():
     for ti, text in enumerate(f):
       if ti%10000 == 0:
         print('now iter %d'%ti)
+      if (ti+1)%10000000 == 0:
+        break
       texts.append( text.strip().split() )
   model = Word2Vec(texts, size=256, window=5, min_count=3, workers=8)
   open('model.wikipedia.pkl', 'wb').write( pickle.dumps(model) )
@@ -65,6 +67,16 @@ def pred():
     except KeyError as e:
       print( "キーが見つかりませんでした" )
 
+def pred_wikipedia():
+  model  = Word2Vec.load('../word2vec.gensim.model')
+  while True:
+    words = input().split()
+    try:
+      tuples = model.wv.most_similar(positive=words)
+      print( json.dumps(tuples, ensure_ascii=False, indent=2) )
+    except KeyError as e:
+      print( "キーが見つかりませんでした" )
+
 def pred_user():
   model  = pickle.loads(open('./model.withusername.pkl', 'rb').read())
   while True:
@@ -74,6 +86,8 @@ def pred_user():
       print( json.dumps(tuples, ensure_ascii=False, indent=2) )
     except KeyError as e:
       print( "キーが見つかりませんでした" )
+
+
 if __name__ == '__main__':
   if '--train' in sys.argv:
     train()
@@ -85,3 +99,5 @@ if __name__ == '__main__':
     pred()
   if '--pred_user' in sys.argv:
     pred_user()
+  if '--pred_wikipedia' in sys.argv:
+    pred_wikipedia()
