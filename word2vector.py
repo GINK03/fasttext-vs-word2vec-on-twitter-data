@@ -17,7 +17,7 @@ def id_freq():
 
   for id, freq in sorted(id_freq.items(), key=lambda x:x[1]*-1):
     print(id, freq)
-#id_freq()
+
 def train():
   with open('who_is_h.wakati.nousername', 'r') as f:
     tweets = []
@@ -28,6 +28,16 @@ def train():
   model = Word2Vec(tweets, size=256, window=5, min_count=3, workers=8)
   open('model.nousername.pkl', 'wb').write( pickle.dumps(model) )
 
+def train_wikipedia():
+  with open('wikipedia.txt', 'r') as f:
+    texts = []
+    for ti, textt in enumerate(f):
+      if ti%10000 == 0:
+        print('now iter %d'%ti)
+      texts.append( text.strip().split() )
+  model = Word2Vec(texts, size=256, window=5, min_count=3, workers=8)
+  open('model.wikipedia.pkl', 'wb').write( pickle.dumps(model) )
+
 def train_username():
   words = set()
   with open('who_is_h.wakati.withusername', 'r') as f:
@@ -35,7 +45,6 @@ def train_username():
     for ti, tweet in enumerate(f):
       if ti%10000 == 0:
         print('now iter %d'%ti)
-      #if ti > 100000: break
       tweets.append( tweet.strip().split() )
       [words.add(word) for word in tweet.strip().split() ]
   open('words.withusername.pkl', 'wb').write( pickle.dumps(words, protocol=4) )
@@ -70,6 +79,8 @@ if __name__ == '__main__':
     train()
   if '--train_username' in sys.argv:
     train_username()
+  if '--train_wikipedia' in sys.argv:
+    train_wikipedia()
   if '--pred' in sys.argv:
     pred()
   if '--pred_user' in sys.argv:
