@@ -31,7 +31,7 @@ def train():
 def train_wikipedia():
   with open('wikipedia.txt', 'r') as f:
     texts = []
-    for ti, textt in enumerate(f):
+    for ti, text in enumerate(f):
       if ti%10000 == 0:
         print('now iter %d'%ti)
       texts.append( text.strip().split() )
