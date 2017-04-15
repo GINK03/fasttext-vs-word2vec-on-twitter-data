@@ -64,7 +64,7 @@ def pred_user():
       tuples = model.wv.most_similar(positive=words)
       print( json.dumps(tuples, ensure_ascii=False, indent=2) )
     except KeyError as e:
-      print( "繧ｭ繝ｼ縺悟ｭ伜惠縺励∪縺帙ｓ縺ｧ縺励◆" )
+      print( "キーが見つかりませんでした" )
 if __name__ == '__main__':
   if '--train' in sys.argv:
     train()
