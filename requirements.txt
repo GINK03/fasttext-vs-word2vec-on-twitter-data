@@ -9,7 +9,7 @@ bz2file==0.98
 chardet==2.3.0
 checkbox-support==0.22
 command-not-found==0.3
-cryptography==1.2.3
+cryptography==3.2
 decorator==4.0.11
 defer==1.0.6
 feedparser==5.1.3
