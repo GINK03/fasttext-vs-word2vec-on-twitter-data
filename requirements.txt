@@ -35,7 +35,7 @@ plainbox==0.25
 plyvel==0.9
 protobuf==3.2.0
 ptyprocess==0.5
-py==1.4.33
+py==1.10.0
 pyasn1==0.1.9
 pycuda==2016.1.2
 pycups==1.9.73
