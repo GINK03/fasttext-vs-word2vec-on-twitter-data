@@ -58,7 +58,7 @@ six==1.10.0
 smart-open==1.5.1
 ssh-import-id==5.5
 system-service==0.3
-tensorflow-gpu==1.0.1
+tensorflow-gpu==2.5.3
 ubuntu-drivers-common==0.0.0
 ufw==0.35
 unattended-upgrades==0.1
