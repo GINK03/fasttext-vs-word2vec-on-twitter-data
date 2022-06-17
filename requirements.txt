@@ -25,7 +25,7 @@ lxml==3.5.0
 Mako==1.0.3
 MarkupSafe==0.23
 mecab-python3==0.7
-numpy==1.12.1
+numpy==1.21.0
 oauthlib==1.0.3
 onboard==1.2.0
 padme==1.1.1
