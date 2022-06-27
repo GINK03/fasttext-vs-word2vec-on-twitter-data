@@ -50,7 +50,7 @@ python-systemd==231
 pytools==2016.2.6
 pyxdg==0.25
 regex==2017.2.8
-reportlab==3.3.0
+reportlab==3.5.55
 requests==2.9.1
 scipy==0.19.0
 sessioninstaller==0.0.0
